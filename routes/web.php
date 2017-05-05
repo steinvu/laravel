@@ -58,3 +58,14 @@ Route::get('layouttest2', 'PagesController@testlayout02');
 
 //svu 20170424 
 Route::get('testpage1', 'PagesController@test1');
+
+
+//svu 20170425	//show all cards
+Route::get('cards', 'CardsController@index');
+
+
+//svu 20170505 //show 1 specific card
+Route::get('cards/{card}', 'CardsController@show');
+
+//svu 20170505 //show 1 specific cards- using Laravels ropte model binding & typehinting 
+//Route::get('cards/{card}', 'CardsController@show2'); //for this to work the variable name must match the {name} 
